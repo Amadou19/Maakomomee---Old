@@ -1,7 +1,10 @@
 package com.amadoutirera.maakomome.view.authentication
 
 
+import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,12 +12,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import com.amadoutirera.maakomome.R
 import com.amadoutirera.maakomome.authentication.sign.Sign_ViewModel
 import com.amadoutirera.maakomome.dagger.ViewModelFactory
 import com.amadoutirera.maakomome.utils.LiveConnectivityManager
 import com.amadoutirera.maakomome.utils.extractContent
 import com.amadoutirera.maakomome.utils.snackbar
+import com.amadoutirera.maakomome.worker.authentication.Authentication_Worker
 import com.jakewharton.rxbinding3.widget.textChanges
 import dagger.android.support.AndroidSupportInjection
 import io.reactivex.Observable
@@ -141,22 +146,34 @@ class Sign_Fragment : Fragment() {
         dialog?.show()
     }*/
 
+ @SuppressLint("StringFormatInvalid")
+private fun dialog_success(email: String) {
+     val builder = context?.let { AlertDialog.Builder(it) }
+             ?.setMessage(getString(R.string.sucssec_sign, email))
+             ?.setPositiveButton("Ok", DialogInterface.OnClickListener { dialogInterface, id ->
+                 Authentication_Worker().sendEmailNow()
+                 view?.findNavController()?.navigate(R.id.historique_Fragment)!!
+
+             })
+     val dialog = builder?.create()
+     dialog?.setCancelable(false)
+     dialog?.show()
+ }
+
+/*---------------- Dagger Injection -------------*/
+@Override
+override fun onAttach(context: Context?) {
+    AndroidSupportInjection.inject(this)
+    super.onAttach(context);
+}
 
 
-    /*---------------- Dagger Injection -------------*/
-    @Override
-    override fun onAttach(context: Context?) {
-        AndroidSupportInjection.inject(this)
-        super.onAttach(context);
-    }
+/*---------------- RX Disposable -------------*/
+override fun onStop() {
+    super.onStop()
+    if(!compositeDisposable.isDisposed) compositeDisposable.dispose()
 
-
-    /*---------------- RX Disposable -------------*/
-    override fun onStop() {
-        super.onStop()
-        if(!compositeDisposable.isDisposed) compositeDisposable.dispose()
-
-    }
+}
 
 
 }
