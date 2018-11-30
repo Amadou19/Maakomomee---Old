@@ -18,13 +18,13 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="50dp"
             android:src="@drawable/maakomome"
-            app:layout_constraintBottom_toTopOf="@+id/emailAdresse_Edt"
+            app:layout_constraintBottom_toTopOf="@+id/emailTextInputLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/emailAdresse_Edt"
+            android:id="@+id/emailTextInputLayout"
             android:layout_width="368dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
@@ -33,6 +33,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
+            android:singleLine="true"
             android:hint="Adresse Email"
             app:layout_constraintBottom_toTopOf="@+id/password_Edt"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +50,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="32dp"
             android:text="Conexion"
-            app:layout_constraintBottom_toTopOf="@+id/recovery_btn"
+            app:layout_constraintBottom_toTopOf="@+id/sign_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
@@ -64,6 +65,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
+            android:singleLine="true"
             android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/login_error"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +74,7 @@
             tools:hint="Mot de passe" />
 
         <Button
-            android:id="@+id/recovery_btn"
+            android:id="@+id/sign_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -94,7 +96,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/recovery_btn" />
+            app:layout_constraintStart_toEndOf="@+id/sign_btn" />
 
 
 
@@ -130,7 +132,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/login_error"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/emailAdresse_Edt"
+            app:layout_constraintTop_toTopOf="@+id/emailTextInputLayout"
             android:visibility="gone"/>
 
         <ProgressBar
@@ -147,7 +149,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/login_error"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/emailAdresse_Edt"
+            app:layout_constraintTop_toTopOf="@+id/emailTextInputLayout"
             android:visibility="gone"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

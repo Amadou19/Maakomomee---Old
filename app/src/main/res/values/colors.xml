@@ -6,4 +6,6 @@
     <color name="eror">#ef4a65</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="dialog_color">#70000000</color>
+    <color name="green">#60E465</color>
 </resources>

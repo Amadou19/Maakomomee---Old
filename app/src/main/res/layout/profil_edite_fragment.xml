@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".home.profil.User_edite.Profil_Edite_Fragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorAccent"
+            tools:src="@tools:sample/backgrounds/scenic[3]" />
+
+        <ImageView
+            android:id="@+id/userProfil_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:src="@tools:sample/avatars[4]" />
+
+        <EditText
+            android:id="@+id/firtname_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/last_name"
+            android:inputType="textLongMessage|textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userProfil_img"
+            app:layout_constraintTop_toTopOf="@+id/userProfil_img" />
+
+
+        <TextView
+            android:id="@+id/firtname_tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:text="@string/invalide_firstname"
+            app:layout_constraintEnd_toEndOf="@+id/firtname_edt"
+            app:layout_constraintStart_toStartOf="@+id/firtname_edt"
+            app:layout_constraintTop_toBottomOf="@+id/firtname_edt"
+            android:padding="3dp"
+            android:textColor="@color/eror"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/lastame_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/first_name"
+            android:inputType="textShortMessage|textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/firtname_edt"
+            app:layout_constraintStart_toStartOf="@+id/firtname_edt"
+            app:layout_constraintTop_toBottomOf="@+id/firtname_tvError" />
+
+        <EditText
+            android:id="@+id/phone_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/firtname_edt"
+            app:layout_constraintStart_toStartOf="@+id/firtname_edt"
+            app:layout_constraintTop_toBottomOf="@+id/lastname_tvError" />
+
+        <TextView
+            android:id="@+id/phon_tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:text="@string/invalide_phonenumber"
+            app:layout_constraintEnd_toEndOf="@+id/firtname_edt"
+            app:layout_constraintStart_toStartOf="@+id/firtname_edt"
+            app:layout_constraintTop_toBottomOf="@+id/phone_edt"
+            android:padding="3dp"
+            android:textColor="@color/eror"
+            android:visibility="gone"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edite_profil_fb_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_done_black_24dp" />
+
+        <TextView
+            android:id="@+id/lastname_tvError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:text="@string/invalide_lastname"
+            app:layout_constraintEnd_toEndOf="@+id/firtname_edt"
+            app:layout_constraintStart_toStartOf="@+id/firtname_edt"
+            app:layout_constraintTop_toBottomOf="@+id/lastame_edt"
+            android:padding="3dp"
+            android:textColor="@color/eror"
+            android:visibility="gone"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,39 +1,48 @@
 package com.amadoutirera.maakomome.utils
 
-import android.app.PendingIntent.getActivity
 import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
 import android.net.ConnectivityManager
+import android.view.View
+import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.amadoutirera.maakomome.R
-import com.amadoutirera.maakomome.view.home.Home_ViewPager
+import com.google.android.material.snackbar.Snackbar
 
 
-//************************** Easy Toast ********************************/
 
-fun Context.toast(text: String) {
-    Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-    Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+
+
+/*------------------ Extract Text --------------------------------*/
+fun EditText.extractContent(extractType : Int): String {
+    when(extractType){
+        1 ->return text.toString()
+        2 ->return text.trim().toString()
+        3-> return text.trim().toString().toLowerCase()
+        4 ->return text.trim().toString().toUpperCase()
+    }
+    return ""
 }
 
-//************************** Get if user is onLine *********************/
+/*------------------ Easy Toast --------------------------------*/
+
+fun Context.toast(message: String) {
+    Toast.makeText(this, message, (R.dimen.toastDuration as Int)).show()
+}
+
+/*------------------ Easy Snackbar --------------------------------*/
+
+fun View.snackbar(message: String) {
+    Snackbar .make(this, message, Snackbar.LENGTH_LONG).show()
+}
+
+/*------------------ Get if user is onLine ------------------------*/
 
 fun Context.isOnline(): Boolean {
     val connectivityManager
             = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
     val networkInfo = connectivityManager!!.activeNetworkInfo
-    if (networkInfo == null )toast(getString(R.string.isOnline))
+    if (networkInfo == null )toast(getString(R.string.offLine))
     return networkInfo != null && networkInfo.isConnected
 }
 
-//************************** Easy Dialoge ********************************/
 
-
-//**************************  ********************************/
-//**************************  ********************************/
-//**************************  ********************************/
-//**************************  ********************************/
-//**************************  ********************************/
-//**************************  ********************************/

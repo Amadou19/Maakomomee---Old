@@ -17,20 +17,35 @@
     <string name="tel_number">Numéro de téléphone</string>
     <string name="empty_error">Veuillez renseigner tous les champs</string>
     <string name="email_or_passeword_error">Adresse email ou mot de passe incorrect</string>
-    <string name="email_exist">cette adresse est déjà enregistrée</string>
+    <string name="email_exist">Cette adresse est déjà enregistrée</string>
 
     <string name="connection">connexion</string>
 
-    <string name="sucssec_sign">inscription effectuée avec succes."\n"Un message vient de vous être envoyé a cette adresse :"\n"\" %1$s \"  "\n"Cliquer sur le lien afin de definir un nouveau mot de passe."\n""\n"Il se peut que le message se soit déplacer dans vos couriers indesirable.</string>
     <string name="email_error">Adresse email invalide</string>
     <string name="password_error">Le mot de passe doit être entre 7 et 20 caractères</string>
-    <string name="isOnline">Vous n\'êtes pas connecté à aucun réseau</string>
+    <string name="offLine">Vérifier votre connexion internet puis réessayer</string>
     <string name="no_empty">Ce champ ne doit pas etre vide</string>
     <string name="password_forgot">Mot de passe oublié</string>
     <string name="send">Envoyer</string>
-    <string name="password_forgot_message">Saisissez votre adresse email"\n"Un message va vous être envoyé."\n"Cliquer sur le lien afin de de valider votre compt."\n""\n"Il se peut que le message se soit déplacer dans vos couriers indesirable."\n"</string>
-
-
-
+    <string name="password_forgot_message">Saisissez votre adresse email"\n"Un message va vous être envoyé."\n"Cliquer sur le lien afin de definir un nouveau mot de passe."\n""\n"Il se peut que le message se soit déplacer dans vos couriers indesirable.</string>
+    <string name="message_sent">Message envoyé ✔︎</string>
+    <string name="unregistered_email">Cette adresse email n\'est pas enregistré</string>
+    <string name="ok">OK</string>
+    <string name="sucssec_sign">inscription effectuée avec succes.\nUn email vient de vous être envoyé cliquer sur le lien afin de de valider votre compt.\nIl se peut que le message soit déplacer dans vos courier indesirable.</string>
+    <string name="eamilFormat">Format adresse mail non valide</string>
+    <string name="diter">Éditer</string>
+    <string name="mk_infos">Inscrivez vous afin d\'obtenir votre numéro unique MK.\nCe numéro vous servira d\'indententifier tout vos affaires et de puvoir vous contacter</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="title_activity_home__navigation_">Mofication Profil</string>
+    <string name="invalide_seizure">Saisie invalide</string>
+    <string name="invalide_firstname">Prénom invalide</string>
+    <string name="invalide_lastname">Nom invalide</string>
+    <string name="invalide_phonenumber">Numéro de téléphone invalide</string>
+    <string name="affiliations">Mes affiliations</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="firsname_lastname">Prénom - Nom</string>
+    <string name="affliate_info">vous pouvez avoir au maximum 2 affiliations</string>
+    <string name="add_affliant">Ajouter un autre affliant</string>
+    <string name="inscription">Inscription</string>
 
 </resources>
