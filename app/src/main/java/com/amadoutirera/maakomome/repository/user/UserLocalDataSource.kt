@@ -40,9 +40,8 @@ class UserLocalDataSource @Inject constructor(private val frbAuth: FirebaseAuth,
                 Timber.e(p1.toString()+"Yosshhh")
                 return profilCombineList
             }
-        })
-                .observeOn(Schedulers.io())
-                .subscribeOn(Schedulers.io())
+
+        }).observeOn(Schedulers.io())
 
     /*override val getUserProfil: Flowable<List<Comparable<*>>>
         get() = Flowables.zip(user_Dao.getUser(userId), userAffiliate_Dao.getUserAffiliate(userId), object : Function2<List<User>, List<Affiliate>, List<Comparable<*>>>{

@@ -41,7 +41,7 @@ class Profil_Edite_ViewModel @Inject constructor(userRepository : UserRepository
 
     fun updteUser(userProfilEdite: User) { parameter.value = userProfilEdite }
 
-    fun getUser(userId: String) { this.userId.value = userId }
+    fun getUser(newuserId: String) { userId.value = newuserId }
 
 
 

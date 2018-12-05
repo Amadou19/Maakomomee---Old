@@ -23,15 +23,13 @@ class Profil_Display_Viewmodel  @Inject constructor (application: Application,  
 
     fun getUserProfil(): LiveData<List<Comparable<*>>>{
 
-        compositeDisposable +=
-                userRepository.getUser()
+        compositeDisposable += userRepository.getUser()
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeBy(
                                 onNext = {profilCombineList.value = it},
                                 onError = { it.printStackTrace() },
                                 onComplete = { println("onComplete!")})
-
         return profilCombineList
     }
 

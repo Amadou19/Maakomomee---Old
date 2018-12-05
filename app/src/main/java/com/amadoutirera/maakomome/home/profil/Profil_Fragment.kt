@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amadoutirera.maakomome.R
 import com.amadoutirera.maakomome.dagger.ViewModelFactory
@@ -89,6 +91,7 @@ class Profil_Fragment : Fragment(), ProfilListner {
 
 
         return view
+
 
     }
 

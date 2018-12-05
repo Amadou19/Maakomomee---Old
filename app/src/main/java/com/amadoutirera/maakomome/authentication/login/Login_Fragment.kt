@@ -36,15 +36,18 @@ class Login_Fragment : Fragment() {
         liveConnectivityManager.observe(this, Observer {isConnected -> isConnect = isConnected })
 
 
+
         /*-------- Replace Login_Fragment with Sign_Fragment-------*/
         view.creat_account.setOnClickListener { view.findNavController().navigate(R.id.sign_Fragment) }
+
 
 
         /*------ Replace Login_Fragment with Recovery_Fragment-----*/
         view.sign_btn.setOnClickListener { view.findNavController().navigate(R.id.recovery_Fragment) }
 
 
-        /*---------------------------------------------------------*/
+
+        /*---------------            - --------------------*/
         view.login_btn.setOnClickListener{
             if (!isConnect){ view?.snackbar(getString(R.string.offLine)) ;return@setOnClickListener }
 
@@ -53,9 +56,14 @@ class Login_Fragment : Fragment() {
         }
 
 
+
         /*------ Observe Sign_viewmodel changement an update UI -------*/
         login_ViewModel = ViewModelProviders.of(requireActivity()).get(Login_ViewModel::class.java)
         login_ViewModel.getState().observe(this, Observer { loginStat -> updateUi(loginStat!!) })
+
+
+        //findNavController().navigate(R.id.sign_Fragment)
+
 
         return view
     }
@@ -80,6 +88,7 @@ class Login_Fragment : Fragment() {
             }
         }
     }
+
 
 
     /*---------------- Dagger Injection -------------*/
