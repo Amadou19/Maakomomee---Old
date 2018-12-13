@@ -1,21 +1,20 @@
 package com.amadoutirera.maakomome.domain
 
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
+
 import com.google.android.gms.tasks.Task
-import io.reactivex.*
+import io.reactivex.Single
 import io.reactivex.annotations.NonNull
 
-class RxFirebase {
+object RxFirebase {
 
 
-    fun <T> getObservable(@NonNull task:Task<T>):Single<T> {
 
-        return Single.create(object:SingleOnSubscribe<T> {
-            override fun subscribe(emitter: SingleEmitter<T>) {
-            }
 
-        })
+    @NonNull
+    fun <T> getObservable(@NonNull task: Task<T>): Single<Task<T>> {
+        return Single.create { emitter ->
+            if (!emitter.isDisposed) { emitter.onSuccess(task) }
+        }
     }
 
 

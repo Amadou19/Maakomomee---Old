@@ -5,18 +5,16 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/login_Fragment">
 
+
+
     <fragment
         android:id="@+id/login_Fragment"
-        android:name="com.amadoutirera.maakomome.view.authentication.Login_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.authentication.login.Login_Fragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
         <action
             android:id="@+id/action_login_Fragment_to_sign_Fragment"
             app:destination="@id/sign_Fragment" />
-        <argument
-            android:name="emailAdresse"
-            app:argType="string"
-            android:defaultValue="null" />
         <action
             android:id="@+id/action_login_Fragment_to_recovery_Fragment"
             app:destination="@id/recovery_Fragment" />
@@ -25,23 +23,27 @@
             app:destination="@id/historique_Fragment" />
     </fragment>
 
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/sign_Fragment"
-        android:name="com.amadoutirera.maakomome.view.authentication.Sign_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.authentication.register.Register_Fragment"
         android:label="sign_fragment"
-        tools:layout="@layout/sign_fragment" >
-        <action
-            android:id="@+id/action_sign_Fragment_to_historique_Fragment"
-            app:destination="@id/historique_Fragment" />
-    </fragment>
+        tools:layout="@layout/sign_fragment" />
+
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/recovery_Fragment"
-        android:name="com.amadoutirera.maakomome.view.authentication.Recovery_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.authentication.recovery.Recovery_Fragment"
         android:label="recovery_fragment"
         tools:layout="@layout/recovery_fragment" />
+
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/historique_Fragment"
-        android:name="com.amadoutirera.maakomome.home.historique.Historique_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.historique.Historique_Fragment"
         android:label="historique_fragment"
         tools:layout="@layout/historique_fragment" >
         <action
@@ -51,9 +53,12 @@
             android:id="@+id/action_historique_Fragment_to_declaration_Fragment"
             app:destination="@id/declaration_Fragment" />
     </fragment>
+
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/profil_Fragment"
-        android:name="com.amadoutirera.maakomome.home.profil.Profil_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.profil.Profil_Fragment"
         android:label="profil_fragment"
         tools:layout="@layout/profil_fragment" >
         <action
@@ -63,19 +68,28 @@
             android:id="@+id/action_profil_Fragment_to_affliate_Edite_Fragment"
             app:destination="@id/affliate_Edite_Fragment" />
     </fragment>
+
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/declaration_Fragment"
-        android:name="com.amadoutirera.maakomome.home.declaration.Declaration_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.declaration.Declaration_Fragment"
         android:label="fragment_declaration"
         tools:layout="@layout/declaration_fragment" />
+
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/profil_Edite_Fragment"
-        android:name="com.amadoutirera.maakomome.home.profil.User_edite.Profil_Edite_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.profil.User_edite.Profil_Edite_Fragment"
         android:label="profil_edite_fragment"
         tools:layout="@layout/profil_edite_fragment" />
+
+    <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <fragment
         android:id="@+id/affliate_Edite_Fragment"
-        android:name="com.amadoutirera.maakomome.home.profil.affiliate_edite.Affliate_Edite_Fragment"
+        android:name="com.amadoutirera.maakomome.presentation.profil.affiliate_edite.Affliate_Edite_Fragment"
         android:label="affliate_edite_fragment"
-        tools:layout="@layout/affliate_edite_fragment" /><action android:id="@+id/action_global_affliate_Edite_Fragment" app:destination="@id/affliate_Edite_Fragment"/>
+        tools:layout="@layout/affliate_edite_fragment" />
 </navigation>

@@ -23,7 +23,7 @@
 
     <string name="email_error">Adresse email incorrect</string>
     <string name="password_error">Le mot de passe doit être entre 7 et 20 caractères</string>
-    <string name="offLine">Vérifier votre connexion internet et réessayer</string>
+    <string name="offLine">Veuillez vérifier votre connexion internet et réessayer</string>
     <string name="no_empty">Ce champ ne doit pas etre vide</string>
     <string name="password_forgot">Mot de passe oublié</string>
     <string name="send">send</string>
@@ -31,7 +31,7 @@
     <string name="message_sent">Message envoyé ✔︎</string>
     <string name="unregistered_email">Cette adresse email n\'est pas enregistré</string>
     <string name="ok">OK</string>
-    <string name="eamilFormat">Format d\'adresse mail non valide</string>
+    <string name="emailFormat">Format d\'adresse mail non valide</string>
     <string name="diter">Éditer</string>
     <string name="mk_infos">Inscrivez vous afin d\'obtenir votre numéro unique MK Ce numéro vous servira d\'indententifier tout vos affaires et de puvoir vous contacter</string>
     <string name="phone_number">Numéro de téléphone</string>
@@ -46,6 +46,7 @@
     <string name="affliate_info">vous pouvez avoir au maximum 2 affiliations</string>
     <string name="add_affliant">Ajouter un autre affliant</string>
     <string name="inscription">Inscription</string>
+    <string name="serverError">Une erreur s\'est produite veuillez réessayer ultérieurement</string>
 
 
 </resources>

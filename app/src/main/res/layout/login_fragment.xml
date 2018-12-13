@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".view.authentication.Login_Fragment">
+    tools:context="com.amadoutirera.maakomome.presentation.authentication.login.Login_Fragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,15 +19,15 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="50dp"
             android:src="@drawable/maakomome"
-            app:layout_constraintBottom_toTopOf="@+id/emailTextInputLayout"
+            app:layout_constraintBottom_toTopOf="@+id/emailAdresse_inp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/emailTextInputLayout"
-            android:layout_width="368dp"
-            android:layout_height="50dp"
+            android:id="@+id/emailAdresse_inp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
@@ -58,7 +59,7 @@
         <EditText
             android:id="@+id/password_Edt"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
@@ -67,7 +68,7 @@
             android:ems="10"
             android:singleLine="true"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@+id/login_error"
+            app:layout_constraintBottom_toTopOf="@+id/login_errorTv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +102,7 @@
 
 
         <TextView
-            android:id="@+id/login_error"
+            android:id="@+id/login_errorTv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -116,7 +117,7 @@
             android:textColor="@color/eror"
             android:text="@string/email_or_passeword_error"
             android:gravity="center"
-            android:visibility="gone"/>
+            android:visibility="invisible"/>
 
         <ProgressBar
             android:id="@+id/progressBar1"
@@ -129,11 +130,11 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/login_error"
+            app:layout_constraintBottom_toBottomOf="@+id/login_errorTv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/emailTextInputLayout"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toTopOf="@+id/emailAdresse_inp"
+            android:visibility="invisible"/>
 
         <ProgressBar
             android:id="@+id/progressBar2"
@@ -146,11 +147,11 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/login_error"
+            app:layout_constraintBottom_toBottomOf="@+id/login_errorTv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/emailTextInputLayout"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toTopOf="@+id/emailAdresse_inp"
+            android:visibility="invisible"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

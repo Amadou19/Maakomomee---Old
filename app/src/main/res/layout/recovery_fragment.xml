@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".view.authentication.Recovery_Fragment">
+    tools:context="com.amadoutirera.maakomome.presentation.authentication.recovery.Recovery_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/emailTextInputLayout"
+            android:id="@+id/emailAdresse_inp"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
@@ -94,7 +94,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/emailAdresse_inp" />
 
 
         <ImageView
@@ -120,7 +120,7 @@
             android:text="@string/password_forgot_message"
             android:textColor="@color/black"
             android:textSize="@dimen/textsize"
-            app:layout_constraintBottom_toTopOf="@+id/emailTextInputLayout"
+            app:layout_constraintBottom_toTopOf="@+id/emailAdresse_inp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

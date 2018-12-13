@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".view.authentication.Sign_Fragment">
+    tools:context="com.amadoutirera.maakomome.presentation.authentication.register.Register_Fragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/passewordErrorTview"
             app:layout_constraintEnd_toEndOf="@+id/passwordTextInputLayout"
             app:layout_constraintStart_toStartOf="@+id/passwordTextInputLayout"
-            app:layout_constraintTop_toTopOf="@+id/emailTextInputLayout"
+            app:layout_constraintTop_toTopOf="@+id/emailAdresse_inp"
             android:visibility="gone"/>
 
         <ProgressBar
@@ -35,14 +35,14 @@
             app:layout_constraintBottom_toBottomOf="@+id/passewordErrorTview"
             app:layout_constraintEnd_toEndOf="@+id/passwordTextInputLayout"
             app:layout_constraintStart_toStartOf="@+id/passwordTextInputLayout"
-            app:layout_constraintTop_toTopOf="@+id/emailTextInputLayout"
+            app:layout_constraintTop_toTopOf="@+id/emailAdresse_inp"
             android:visibility="gone"/>
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/emailTextInputLayout"
+            android:id="@+id/emailAdresse_inp"
 
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -151,7 +151,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="32dp"
             android:src="@drawable/maakomome"
-            app:layout_constraintBottom_toTopOf="@+id/emailTextInputLayout"
+            app:layout_constraintBottom_toTopOf="@+id/emailAdresse_inp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

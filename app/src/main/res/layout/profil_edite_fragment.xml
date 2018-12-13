@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".home.profil.User_edite.Profil_Edite_Fragment">
+    tools:context=".presentation.profil.User_edite.Profil_Edite_Fragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

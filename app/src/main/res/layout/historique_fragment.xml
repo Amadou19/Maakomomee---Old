@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".home.historique.Historique_Fragment"
+    tools:context=".presentation.historique.Historique_Fragment"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -97,7 +97,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="2dp"
-                android:text="98 : AE : D5 : F8"
+                android:text="98 : AE : D5 : F8 : DK"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 app:layout_constraintBottom_toBottomOf="@+id/mkTview"
                 app:layout_constraintStart_toEndOf="@+id/mkTview"

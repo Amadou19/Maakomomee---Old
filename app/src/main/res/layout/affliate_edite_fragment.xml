@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".home.profil.affiliate_edite.Affliate_Edite_Fragment">
+    tools:context=".presentation.profil.affiliate_edite.Affliate_Edite_Fragment">
 
     <TextView
         android:id="@+id/affliationTview"
