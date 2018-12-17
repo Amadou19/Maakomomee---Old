@@ -15,6 +15,7 @@ Kotlin + Clean Architecture MVVM + Dagger2 + RXKotlin - RXJava - RXAndroid
 Android Jetpack : • LiveData • Lifecycles • ViewModel • Navigation • Room • WorkManager
 
 
+
 /*------------------------------------------------------------*/
 
 If you try to run the application, it will happen an error, because for reasons of security I removed the [google-services.json], essential for the good function of the modules of Firebase, you can replace it by yours by creating a firebase project -> https://firebase.google.com/
