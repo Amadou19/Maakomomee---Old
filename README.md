@@ -4,9 +4,11 @@
 This project is not finished yet, updates will be done at the fure and measure.
 
 
+
 This project Use :
 
 AndroidX -> https://developer.android.com/jetpack/androidx/
+
 Requirt Android Studio 3.2  or  higher.
 
 Kotlin + Clean Architecture MVVM + Dagger2 + RXKotlin - RXJava - RXAndroid
