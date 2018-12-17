@@ -4,9 +4,7 @@ package com.amadoutirera.maakomome.presentation.profil
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -34,6 +32,7 @@ class Profil_Fragment : Fragment(), ProfilListner {
 
     @SuppressLint("WrongConstant")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        setHasOptionsMenu(true)
         val view = inflater.inflate(R.layout.profil_fragment, container, false)
 
 
@@ -70,6 +69,18 @@ class Profil_Fragment : Fragment(), ProfilListner {
 
     /*----------------  -------------*/
     override fun affiliateListner(affiliate: Affiliate, positio: Int) {}
+
+
+
+
+
+
+
+
+    /*----------------       Menu      -------------*/
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_activity_navigation, menu)
+    }
 
 
 

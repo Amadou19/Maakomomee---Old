@@ -6,12 +6,11 @@
     app:startDestination="@id/login_Fragment">
 
 
-
     <fragment
         android:id="@+id/login_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.authentication.login.Login_Fragment"
-        android:label="login_fragment"
-        tools:layout="@layout/login_fragment" >
+        android:label="@string/connexion"
+        tools:layout="@layout/login_fragment">
         <action
             android:id="@+id/action_login_Fragment_to_sign_Fragment"
             app:destination="@id/sign_Fragment" />
@@ -28,7 +27,7 @@
     <fragment
         android:id="@+id/sign_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.authentication.register.Register_Fragment"
-        android:label="sign_fragment"
+        android:label="@string/inscription"
         tools:layout="@layout/sign_fragment" />
 
     <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -36,7 +35,7 @@
     <fragment
         android:id="@+id/recovery_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.authentication.recovery.Recovery_Fragment"
-        android:label="recovery_fragment"
+        android:label="@string/recovery"
         tools:layout="@layout/recovery_fragment" />
 
     <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -44,7 +43,7 @@
     <fragment
         android:id="@+id/historique_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.historique.Historique_Fragment"
-        android:label="historique_fragment"
+        android:label="@string/historique"
         tools:layout="@layout/historique_fragment" >
         <action
             android:id="@+id/action_historique_Fragment_to_profil_Fragment"
@@ -59,7 +58,7 @@
     <fragment
         android:id="@+id/profil_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.profil.Profil_Fragment"
-        android:label="profil_fragment"
+        android:label="@string/profil"
         tools:layout="@layout/profil_fragment" >
         <action
             android:id="@+id/action_profil_Fragment_to_profil_Edite_Fragment"
@@ -74,7 +73,7 @@
     <fragment
         android:id="@+id/declaration_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.declaration.Declaration_Fragment"
-        android:label="fragment_declaration"
+        android:label="@string/declaration"
         tools:layout="@layout/declaration_fragment" />
 
     <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -82,7 +81,7 @@
     <fragment
         android:id="@+id/profil_Edite_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.profil.User_edite.Profil_Edite_Fragment"
-        android:label="profil_edite_fragment"
+        android:label="@string/edite_profil"
         tools:layout="@layout/profil_edite_fragment" />
 
     <!--  - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -90,6 +89,6 @@
     <fragment
         android:id="@+id/affliate_Edite_Fragment"
         android:name="com.amadoutirera.maakomome.presentation.profil.affiliate_edite.Affliate_Edite_Fragment"
-        android:label="affliate_edite_fragment"
+        android:label="@string/affliate_edite"
         tools:layout="@layout/affliate_edite_fragment" />
 </navigation>

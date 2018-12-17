@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.amadoutirera.maakomome.R
 import com.amadoutirera.maakomome.di.ViewModelFactory
 import com.amadoutirera.maakomome.utils_extension.snackbar
@@ -31,7 +33,7 @@ class Recovery_Fragment : Fragment() {
 
 
         /*----------------------------------------------------------*/
-        view.sign_btn.setOnClickListener{
+        view.recovery_btn.setOnClickListener{
             recoveryViewModel.passewordRenitialise(view.emailAdresse_inp.extractContent(3))
         }
 
@@ -54,16 +56,14 @@ class Recovery_Fragment : Fragment() {
 
             is Recovery_ViewModel.Recovery_ViewModel_State.Editable -> {
 
+                state.snackbarMessage?.getContentIfNotHandled()?.let { view?.snackbar(getString(state.snackbarMessage.peekContent()))  }
                 view?.emailErrorTview?.text = state.tv_Error?.let { getString(it) }
+
+                if (state.btnIsEnabled) view?.recovery_btn?.isEnabled  = true else  view?.recovery_btn?.isEnabled = false
                 if (state.tv_ErrorVisiblity) view?.emailErrorTview?.visibility  = View.VISIBLE else  view?.emailErrorTview?.visibility  = View.INVISIBLE
                 if (state.progressBarVisiblity) view?.progressBar1?.visibility  = View.VISIBLE else  view?.progressBar1?.visibility  = View.INVISIBLE
-                if (state.progressBarVisiblity) view?.progressBar2?.visibility  = View.VISIBLE else  view?.progressBar2?.visibility  = View.INVISIBLE
+                if (state.progressBarVisiblity) view?.progressBar2?.visibility  = View.VISIBLE else  view?.progressBar2?.visibility  = View.INVISIBLE }
 
-                state.snackbarMessage?.getContentIfNotHandled()?.let { view?.snackbar(getString(state.snackbarMessage.peekContent()))  }!!
-
-
-
-            }
 
             is Recovery_ViewModel.Recovery_ViewModel_State.Success -> {
 
@@ -73,8 +73,8 @@ class Recovery_Fragment : Fragment() {
                 view?.progressBar2?.visibility  = View.INVISIBLE
                 state.snackbarMessage?.let { getString(it) }?.let { view?.snackbar(it) }
 
-                view!!.findNavController().navigate(R.id.login_Fragment)
-            }
+                val navOptions = NavOptions.Builder().setPopUpTo(R.id.login_Fragment, true).build()
+                findNavController().navigate(R.id.login_Fragment, null, navOptions) }
         }
     }
 

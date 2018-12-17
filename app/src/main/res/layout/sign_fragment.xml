@@ -43,7 +43,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/emailAdresse_inp"
-
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
@@ -59,7 +58,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:hint="@string/email_adresse" />
+                android:hint="@string/email_adresse"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +83,8 @@
             app:layout_constraintBottom_toTopOf="@+id/passewordErrorTview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_Edt"
@@ -87,7 +92,12 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:singleLine="true"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

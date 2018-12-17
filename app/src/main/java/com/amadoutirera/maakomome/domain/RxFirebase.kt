@@ -11,7 +11,7 @@ object RxFirebase {
 
 
     @NonNull
-    fun <T> getObservable(@NonNull task: Task<T>): Single<Task<T>> {
+    fun <T> firebaseAuthObservable(@NonNull task: Task<T>): Single<Task<T>> {
         return Single.create { emitter ->
             if (!emitter.isDisposed) { emitter.onSuccess(task) }
         }

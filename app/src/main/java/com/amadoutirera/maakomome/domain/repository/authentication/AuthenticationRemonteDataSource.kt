@@ -20,7 +20,7 @@ class AuthenticationRemonteDataSource  @Inject constructor(private val firebaseA
     override fun loginUser(email: String, password: String): Either<Failure, Single<Task<AuthResult>>> {
 
         return when (networkHandler.isConnected) {
-            true ->  Either.ExecutSuccess(RxFirebase.getObservable(firebaseAuth.signInWithEmailAndPassword(email, password))
+            true ->  Either.ExecutSuccess(RxFirebase.firebaseAuthObservable(firebaseAuth.signInWithEmailAndPassword(email, password))
                     .subscribeOn(Schedulers.io()))
             false ->  Either.ExecutError(Failure.NetworkConnection())
             null ->  Either.ExecutError(Failure.FeatureFailure())
@@ -33,7 +33,7 @@ class AuthenticationRemonteDataSource  @Inject constructor(private val firebaseA
     override fun registertUser(email: String, password: String): Either<Failure, Single<Task<AuthResult>>> {
 
         return when (networkHandler.isConnected) {
-            true ->  Either.ExecutSuccess( RxFirebase.getObservable(firebaseAuth.createUserWithEmailAndPassword(email,password))
+            true ->  Either.ExecutSuccess( RxFirebase.firebaseAuthObservable(firebaseAuth.createUserWithEmailAndPassword(email,password))
                     .subscribeOn(Schedulers.io()))
             false ->  Either.ExecutError(Failure.NetworkConnection())
             null ->  Either.ExecutError(Failure.FeatureFailure())
@@ -47,7 +47,7 @@ class AuthenticationRemonteDataSource  @Inject constructor(private val firebaseA
     override fun sendEmailVerification(): Either<Failure, Single<Task<Void>>> {
 
         return when (networkHandler.isConnected) {
-            true -> Either.ExecutSuccess(RxFirebase.getObservable(firebaseAuth.currentUser!!.sendEmailVerification())
+            true -> Either.ExecutSuccess(RxFirebase.firebaseAuthObservable(firebaseAuth.currentUser!!.sendEmailVerification())
                     .subscribeOn(Schedulers.io()))
 
             false ->  Either.ExecutError(Failure.NetworkConnection())
@@ -61,7 +61,7 @@ class AuthenticationRemonteDataSource  @Inject constructor(private val firebaseA
     override fun sendPasswordResetEmail(email: String): Either<Failure, Single<Task<Void>>> {
 
         return when (networkHandler.isConnected) {
-            true ->  Either.ExecutSuccess( RxFirebase.getObservable(firebaseAuth.sendPasswordResetEmail(email))
+            true ->  Either.ExecutSuccess( RxFirebase.firebaseAuthObservable(firebaseAuth.sendPasswordResetEmail(email))
                     .subscribeOn(Schedulers.io()))
             false ->  Either.ExecutError(Failure.NetworkConnection())
             null ->  Either.ExecutError(Failure.FeatureFailure())
@@ -74,7 +74,7 @@ class AuthenticationRemonteDataSource  @Inject constructor(private val firebaseA
     override fun updatePassword(password: String): Either<Failure, Single<Task<Void>>> {
 
         return when (networkHandler.isConnected) {
-            true ->  Either.ExecutSuccess( RxFirebase.getObservable(firebaseAuth.currentUser!!.updatePassword(password))
+            true ->  Either.ExecutSuccess( RxFirebase.firebaseAuthObservable(firebaseAuth.currentUser!!.updatePassword(password))
                     .subscribeOn(Schedulers.io()))
             false ->  Either.ExecutError(Failure.NetworkConnection())
             null ->  Either.ExecutError(Failure.FeatureFailure())

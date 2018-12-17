@@ -29,6 +29,7 @@ class Recovery_ViewModel @Inject constructor(private val authenticationRepositor
         class Editable(@StringRes val tv_Error: Int? = null,
                        var  tv_ErrorVisiblity: Boolean = false,
                        var progressBarVisiblity: Boolean = false,
+                       var btnIsEnabled: Boolean = true,
                        @StringRes val snackbarMessage: Event<Int>? = null) : Recovery_ViewModel_State()
         class Success(@StringRes val snackbarMessage: Int? = null)  : Recovery_ViewModel_State()
     }
@@ -45,7 +46,7 @@ class Recovery_ViewModel @Inject constructor(private val authenticationRepositor
     /*-------------  --------------*/
     fun passewordRenitialise(emailAdresse: String) {
 
-        recoveryState.value = Recovery_ViewModel_State.Editable(progressBarVisiblity = true)
+        recoveryState.value = Recovery_ViewModel_State.Editable(progressBarVisiblity = true, btnIsEnabled = false)
 
         when {
 

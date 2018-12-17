@@ -28,6 +28,7 @@ class Login_ViewModel @Inject constructor(val authenticationRepository: Authenti
     sealed class Login_ViewModel_State {
         class Editable(@StringRes var emailAndPassworError: Int? = null,
                        var loginErrorVisiblity: Boolean = false,
+                       var btnIsEnabled: Boolean = true,
                        @StringRes val  snackbarMessage: Event<Int>? = null,
                        val progressBarVisiblity: Boolean = false) : Login_ViewModel_State()
         object Success : Login_ViewModel_State()
@@ -42,7 +43,7 @@ class Login_ViewModel @Inject constructor(val authenticationRepository: Authenti
     /*-------------     --------------*/
     fun login(email: String, password: String) {
 
-        loginState.value = Login_ViewModel_State.Editable(progressBarVisiblity = true)
+        loginState.value = Login_ViewModel_State.Editable(progressBarVisiblity = true, btnIsEnabled = false)
 
         when {
             email.isEmpty() || password.isEmpty() -> loginState.value =

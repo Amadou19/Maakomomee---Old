@@ -24,9 +24,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailAdresse_inp"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/password_inp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"  >
+
+        <EditText
+            android:id="@+id/emailAdresse_edt"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -35,11 +51,9 @@
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:singleLine="true"
-            android:hint="Adresse Email"
-            app:layout_constraintBottom_toTopOf="@+id/password_Edt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:hint="@string/email_adresse" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/login_btn"
@@ -56,23 +70,42 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/password_Edt"
-            android:layout_width="0dp"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_inp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:singleLine="true"
             android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/login_errorTv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:hint="Mot de passe" />
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <EditText
+                android:id="@+id/password_Edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/password"
+                android:ems="10"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                app:layout_constraintBottom_toTopOf="@+id/login_errorTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/sign_btn"
@@ -152,6 +185,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/emailAdresse_inp"
             android:visibility="invisible"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

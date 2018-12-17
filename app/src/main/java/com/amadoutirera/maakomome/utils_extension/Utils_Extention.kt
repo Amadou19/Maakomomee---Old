@@ -24,29 +24,23 @@ fun EditText.extractContent(extractType : Int): String {
     return ""
 }
 
-/*------------------ Easy Toast --------------------------------*/
 
+
+/*------------------ Easy Toast --------------------------------*/
 fun Context.toast(message: String) {
     Toast.makeText(this, message, (R.dimen.toastDuration as Int)).show()
 }
 
-/*------------------ Easy Snackbar --------------------------------*/
 
+
+/*------------------ Easy Snackbar --------------------------------*/
 fun View.snackbar(message: String) {
     Snackbar .make(this, message, Snackbar.LENGTH_LONG).show()
 }
 
-/*------------------ Get if user is onLine ------------------------*/
-
-fun Context.isOnline(): Boolean {
-    val connectivityManager
-            = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
-    val networkInfo = connectivityManager!!.activeNetworkInfo
-    if (networkInfo == null )toast(getString(R.string.offLine))
-    return networkInfo != null && networkInfo.isConnected
-}
 
 
+/*------------------ Livedata onLine ------------------------*/
 val Context.networkInfo: NetworkInfo? get() = (this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager).activeNetworkInfo
 
 

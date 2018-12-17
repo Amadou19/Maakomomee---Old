@@ -47,6 +47,15 @@
     <string name="add_affliant">Ajouter un autre affliant</string>
     <string name="inscription">Inscription</string>
     <string name="serverError">Une erreur s\'est produite veuillez réessayer ultérieurement</string>
+    <string name="parametre">Paramètre</string>
+    <string name="recovery">Mot de passe oublié</string>
+    <string name="historique">Historique</string>
+    <string name="profil">Profil</string>
+    <string name="declaration">Déclaration</string>
+    <string name="edite_profil">Éditer profil</string>
+    <string name="affliate_edite">Éditer affliation</string>
+    <string name="connexion">Connexion</string>
+    <string name="logOut">Déconnexion</string>
 
 
 </resources>

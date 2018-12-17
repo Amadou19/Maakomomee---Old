@@ -30,10 +30,9 @@ class Register_Fragment : Fragment() {
 
 
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view : View = inflater.inflate(R.layout.sign_fragment, container, false)
-
-
 
 
         /*---------------------------- Creat User ---------------------*/
@@ -60,21 +59,17 @@ class Register_Fragment : Fragment() {
 
             is Register_ViewModel.Sign_ViewModel_State.Editable -> {
 
-                view?.emailErrorTview?.text = state.emailErrorTview?.let { getString(it) }
-
-                view?.passewordErrorTview?.text = state.passewordErrorTview?.let { getString(it) }
-
                 state.snackbarMessage?.getContentIfNotHandled()?.let { view?.snackbar(getString(state.snackbarMessage.peekContent()))  }
 
+                view?.emailErrorTview?.text = state.emailErrorTview?.let { getString(it) }
+                view?.passewordErrorTview?.text = state.passewordErrorTview?.let { getString(it) }
+
+                if (state.btnIsEnabled) view?.sign_btn?.isEnabled  = true else  view?.sign_btn?.isEnabled = false
                 if (state.emailErrorTviewVisiblity) view?.emailErrorTview?.visibility = View.VISIBLE else  view?.emailErrorTview?.visibility = View.INVISIBLE
-
                 if (state.passewordErrortVisiblity) view?.passewordErrorTview?.visibility  = View.VISIBLE else view?.passewordErrorTview?.visibility  = View.INVISIBLE
-
                 if (state.progressBarVisiblity) view?.progressBar1?.visibility  = View.VISIBLE else  view?.progressBar1?.visibility  = View.INVISIBLE
-
                 if (state.progressBarVisiblity) view?.progressBar2?.visibility  = View.VISIBLE else view?.progressBar2?.visibility  = View.INVISIBLE
             }
-
 
             is Register_ViewModel.Sign_ViewModel_State.Success -> {
 
@@ -86,12 +81,9 @@ class Register_Fragment : Fragment() {
                 view?.progressBar2?.visibility  = View.INVISIBLE
 
                 state.dialogSuccsessMessage?.getContentIfNotHandled()?.let {
-
                     requireContext().alert(R.string.sucssec_sign) {
                         yesButton { view?.findNavController()?.navigate(R.id.historique_Fragment); it.dismiss()  }
-                        isCancelable = false
-                    }.show()
-                }
+                        isCancelable = false }.show() }
 
                 val navOptions = NavOptions.Builder().setPopUpTo(R.id.login_Fragment, true).build()
                 findNavController().navigate(R.id.historique_Fragment, null, navOptions)
