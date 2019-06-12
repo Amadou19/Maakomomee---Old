@@ -11,7 +11,7 @@ AndroidX -> https://developer.android.com/jetpack/androidx/
 
 Requirt Android Studio 3.2  or  higher.
 
-Kotlin + Clean Architecture MVVM + Dagger2 + RXKotlin - RXJava - RXAndroid
+Kotlin + MVVM + Dagger2 + RXKotlin - RXJava - RXAndroid
 
 • Glide • Anko •Timber •Firebase
 
